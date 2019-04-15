@@ -1,0 +1,21 @@
+{
+  "name": "wakedispatch",
+  "version": "1.0.0",
+  "description": "An application to stream Wake Dispatch twitter and convert and store as GeoJSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Connelly (patrick@deadlypenguin.com)",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0",
+    "nano": "^8.0.1",
+    "q": "^1.5.1",
+    "request": "^2.88.0",
+    "twitter-lite": "^0.9.4"
+  }
+}
