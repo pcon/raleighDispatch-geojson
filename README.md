@@ -1,4 +1,5 @@
 # Wake County Dispatch GeoJSON
+[![Build Status](https://travis-ci.org/pcon/raleighDispatch-geojson.svg?branch=master)](https://travis-ci.org/pcon/raleighDispatch-geojson)
 
 This application streams the [WakeDispatch](https://twitter.com/WakeDispatch) and converts the data in it's tweets to GeoJSON.  This then allows you to use automation software like [Home Assistant](https://www.home-assistant.io/components/geo_json_events/) to alert on this data or to use [Leaflet](https://leafletjs.com/examples/geojson/) to display the data online.  The WakeDispatch account handles EMS and fire for Raleigh, NC and the greater Wake County area.
 
@@ -6,11 +7,11 @@ This application streams the [WakeDispatch](https://twitter.com/WakeDispatch) an
 The application is written in NodeJS and provides an API endpoint to get the GeoJSON as well as a service to stream the feed and write it to a database.
 
 The current supported backing databases are:
-* CouchDB
+*   CouchDB
 
 ## Requirements
 ### Database
-* CouchDB - An instance of CouchDB with permissions to read, write and create views
+*   CouchDB - An instance of CouchDB with permissions to read, write and create views
 
 ### NodeJS
 Developed against NodeJS v8, the application should run on newer versions as well
@@ -31,7 +32,7 @@ Export the following environment variables using the `export` command
 | TWITTER_CONSUMER_SECRET | def456 |
 | TWITTER_ACCESS_TOKEN_KEY | hij789 |
 | TWITTER_ACCESS_TOKEN_SECRET | klm012 |
-| COUCHDB_URL | https://user:pasword@example.com:443 |
+| COUCHDB_URL | <https://user:pasword@example.com:443> |
 | COUCHDB_DATABASE | wakedispatch |
 | PORT | 5000 |
 
@@ -48,6 +49,7 @@ After the application is setup run it by calling `node index.js` or with startin
 ### GeoJSON Endpoints
 To retrieve the GeoJSON, the following endpoints are provided.
 
-* `/geojson` - This endpoint gets **ALL** of the data known about in the system.  This will typically be pretty slow once the data set grows.  It primarily exists for debugging purposes.
-* `/last24` - This endpoint gets the data for the last 24 hours.
-* `/latest` - This endpoint gets the most recent entry.  Useful for checking if the data is fresh.
+*   `/geojson` - This endpoint gets **ALL** of the data known about in the system.  This will typically be pretty slow once the data set grows.  It primarily exists for debugging purposes.
+*   `/last24` - This endpoint gets the data for the last 24 hours.
+*   `/latest` - This endpoint gets the most recent entry.  Useful for checking if the data is fresh.
+*   `/latest/:type/:amount` - This endpoint gets the data for a speficied amount of time.  Example: `/latest/minutes/50` will get results for the last 50 minutes.

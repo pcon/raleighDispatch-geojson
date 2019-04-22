@@ -10,6 +10,7 @@ module.exports = { apps: [ {
         COUCHDB_URL: 'https://user:pasword@example.com:443',
         COUCHDB_DATABASE: 'wakedispatch',
         PORT: 5000,
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        RUN_WATCHER: true
     }
 } ] };

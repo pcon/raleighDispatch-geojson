@@ -1,11 +1,23 @@
 {
   "name": "wakedispatch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An application to stream Wake Dispatch twitter and convert and store as GeoJSON",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "lint-eslint": "./node_modules/.bin/eslint index.js lib/*",
+    "lint-md": "./node_modules/.bin/remark --no-stdout -f *.md",
+    "lint": "npm run lint-eslint && npm run lint-md",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended",
+      [
+        "remark-lint-final-newline",
+        false
+      ]
+    ]
   },
   "author": "Patrick Connelly (patrick@deadlypenguin.com)",
   "license": "GPL-3.0",
@@ -15,8 +27,16 @@
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "nano": "^8.0.1",
+    "number-to-words": "^1.2.4",
     "q": "^1.5.1",
     "request": "^2.88.0",
     "twitter-lite": "^0.9.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "remark": "^10.0.1",
+    "remark-cli": "^6.0.1",
+    "remark-lint": "^6.0.4",
+    "remark-preset-lint-recommended": "^3.0.2"
   }
 }
