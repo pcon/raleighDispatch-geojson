@@ -62,3 +62,6 @@ typings/
 
 # pm2 ecosystem files
 ecosystem.config.js
+
+# VSCode
+*.code-workspace
