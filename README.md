@@ -1,6 +1,9 @@
 # Wake County Dispatch GeoJSON
 [![Build Status](https://travis-ci.org/pcon/raleighDispatch-geojson.svg?branch=master)](https://travis-ci.org/pcon/raleighDispatch-geojson)
 
+
+# This is now *DEPRECATED* the twitter account is [no longer being updated](https://twitter.com/WakeDispatch/status/1123971212227620865).  Maybe it'll be back someday.  Leaving this up as an example of how to parse twitter and generate GeoJSON data.
+
 This application streams the [WakeDispatch](https://twitter.com/WakeDispatch) and converts the data in it's tweets to GeoJSON.  This then allows you to use automation software like [Home Assistant](https://www.home-assistant.io/components/geo_json_events/) to alert on this data or to use [Leaflet](https://leafletjs.com/examples/geojson/) to display the data online.  The WakeDispatch account handles EMS and fire for Raleigh, NC and the greater Wake County area.
 
 # Usage
